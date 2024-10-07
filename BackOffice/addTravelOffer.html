@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Dashboard - Travel Booking</title>
+
+    <link href="../FrontOffice/css/styles.css" rel="stylesheet" />
+    <style>
+      .margin {
+        margin: 0 35px;
+      }
+      .center {
+        text-align: center;
+      }
+      .center-table {
+        width: 100%;
+      }
+      .center-table td {
+        text-align: center;
+      }
+      .menu-item {
+        font-size: 20px; /* Set font size */
+        margin: 0 15px; /* Add horizontal margin for spacing */
+        text-decoration: none; /* Remove underline from links */
+      }
+      .menu-container {
+        text-align: left; /* Center the menu horizontally */
+        margin-bottom: 20px; /* Add space below the menu */
+      }
+    </style>
+  </head>
+
+  <body>
+    <img src="../FrontOffice/assets/img/esprit.png" alt="Logo Esprit Tunisie" height="150" />
+    <br />
+    <div class="menu-container">
+      <a href="../FrontOffice/index.html" class="menu-item" target="_self" title="Travel Offers">Home</a>
+      <a href="../FrontOffice/about.html" class="menu-item" target="_self" title="About">About </a>
+      <a href="#contact" class="menu-item" target="_self" title="Contact">Contact</a>
+      <a href="#" class="menu-item" target="_self" title="Dashboard">Dashboard</a>
+    </div>
+    <div class="masthead bg-primary text-white text-center">
+      <h1 class="masthead-heading text-uppercase">Add Travel Offer</h1>
+    </div>
+    <br />
+    <section>
+      <div class="container">
+        <form id="form" action="/">
+          <div class="input-control">
+            <label for="Title"> Offer Title:</label>
+            <input type="text" id="title" name="title" required minlength="5" maxlength="25" size="28" />
+            <div class="error"></div>
+          </div>
+          <div class="input-control">
+            <label for="Destination"> Destination:</label>
+            <input type="text" id="destination" name="destination" required minlength="5" maxlength="25" size="28" />
+            <div class="error"></div>
+          </div>
+          <div class="input-control">
+            <label for="DepDate"> Departure Date:</label>
+            <input type="date" id="depdate" name="depdate" required />
+            <div class="error"></div>
+          </div>
+          <div class="input-control">
+            <label for="RetDate"> Return Date:</label>
+            <input type="date" id="retdate" name="retdate" required />
+            <div class="error"></div>
+          </div>
+          <br />
+          <div class="input-control">
+            <label for="Price"> Price ($):</label>
+            <input type="text" id="price" name="price" placeholder="124.20$" minlength="3" maxlength="10" size="28" required />
+            <div class="error"></div>
+          </div>
+          <br />
+          <label for="Category"> Category:</label>
+          <select name="category" id="category">
+            <option value="0">Adventure</option>
+            <option value="1">Couples</option>
+            <option value="2">Family</option>
+          </select>
+          <button type="submit" id="submit" value="Submit">Submit</button>
+        </form>
+      </div>
+    </section>
+    <br /><br />
+    <footer>
+      <section>
+        <h5 class="center">Copyright © your website 2024</h5>
+      </section>
+    </footer>
+    <script src="/BackOffice/js/addOffer2.js"></script>
+  </body>
+</html>
